@@ -12,6 +12,10 @@ public class SceneController : MonoBehaviour
     [SerializeField] private float actionDuration; // Durée du timer pour l'action
     [SerializeField] private int sceneIndex = 0;  // 0 pour première scène, 1 pour deuxième, etc.
 
+    [Header("Dialogues")]
+    [SerializeField] private List<DialogueSequence> sceneDialogues = new List<DialogueSequence>(); // Dialogues pendant la scène principale
+    [SerializeField] private List<float> dialogueDelays = new List<float>(); // Délais avant chaque dialogue
+
     [Header("Contrôle de flux")]
     [SerializeField] private bool isEndOfBranch = false; // Indique si cette scène est la fin d'une branche
     [SerializeField] private string defaultNextSceneName = ""; // Scène par défaut si aucune zone n'est activée
@@ -32,6 +36,7 @@ public class SceneController : MonoBehaviour
     private HashSet<string> zonesAlreadyCounted = new HashSet<string>();
     private bool hasTriggeredSceneChange = false; // Pour ne déclencher qu'une seule transition
     private bool hasTriggeredDefaultMovement = false; // Pour ne déclencher le mouvement par défaut qu'une fois
+    private Coroutine sceneDialoguesCoroutine; // Référence à la coroutine des dialogues de scène
 
     // Propriétés publiques en lecture seule
     public string SceneName => sceneName;
@@ -76,6 +81,9 @@ public class SceneController : MonoBehaviour
 
         isSceneStarted = true;
 
+        // Lancer les dialogues de la scène en parallèle
+        sceneDialoguesCoroutine = StartCoroutine(PlaySceneDialogues());
+
         // Attendre que la durée de la scène soit écoulée
         yield return new WaitForSeconds(sceneDuration);
 
@@ -97,6 +105,12 @@ public class SceneController : MonoBehaviour
         // Attendre pour s'assurer que tous les mouvements ont été déclenchés
         yield return new WaitForSeconds(0.5f);
 
+        // Arrêter la coroutine des dialogues de scène si elle est encore en cours
+        if (sceneDialoguesCoroutine != null)
+        {
+            StopCoroutine(sceneDialoguesCoroutine);
+        }
+
         // Si aucune zone n'a déclenché de changement de scène et qu'il y a une scène suivante par défaut
         if (!hasTriggeredSceneChange && !string.IsNullOrEmpty(defaultNextSceneName) && GameManager.Instance != null)
         {
@@ -104,6 +118,38 @@ public class SceneController : MonoBehaviour
         }
 
         Debug.Log($"Fin de la scène: {sceneName}");
+    }
+
+    // Coroutine pour jouer les dialogues pendant la scène principale
+    private IEnumerator PlaySceneDialogues()
+    {
+        if (sceneDialogues == null || sceneDialogues.Count == 0)
+            yield break;
+
+        // Vérifier que les délais sont configurés correctement
+        if (dialogueDelays.Count != sceneDialogues.Count)
+        {
+            Debug.LogWarning("Le nombre de délais ne correspond pas au nombre de dialogues. Utilisation de délais par défaut.");
+            dialogueDelays.Clear();
+            for (int i = 0; i < sceneDialogues.Count; i++)
+            {
+                dialogueDelays.Add(i * 5f); // Délai par défaut de 5 secondes entre chaque dialogue
+            }
+        }
+
+        // Jouer les dialogues avec leurs délais respectifs
+        for (int i = 0; i < sceneDialogues.Count; i++)
+        {
+            if (sceneDialogues[i] != null)
+            {
+                yield return new WaitForSeconds(dialogueDelays[i]);
+
+                if (DialogueSystem.Instance != null)
+                {
+                    yield return StartCoroutine(DialogueSystem.Instance.PlayDialogueSequence(sceneDialogues[i]));
+                }
+            }
+        }
     }
 
     void Update()
@@ -120,14 +166,6 @@ public class SceneController : MonoBehaviour
                 EndAction();
             }
         }
-    }
-
-    // Coroutine pour gérer la phase d'attente avant l'action
-    private IEnumerator WaitBeforeAction()
-    {
-        Debug.Log($"La scène commence dans {sceneDuration} secondes...");
-        yield return new WaitForSeconds(sceneDuration);
-        StartAction();
     }
 
     // Démarre la phase d'action
