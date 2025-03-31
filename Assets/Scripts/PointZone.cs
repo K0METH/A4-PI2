@@ -9,6 +9,9 @@ public class PointZone : MonoBehaviour
     [Header("Configuration de base")]
     [SerializeField] private string zoneName = "Zone";
     [SerializeField] private int pointValue = 0;
+    [TextArea(3, 5)] // Pour permettre plusieurs lignes de texte dans l'inspecteur
+    [Tooltip("Description pour documentation interne uniquement")]
+    [SerializeField] private string zoneDescription = ""; // Description de cette zone pour documentation dans l'éditeur
 
     [Header("Transition de scène")]
     [SerializeField] private string nextSceneName = ""; // Pour la prochaine scène
@@ -177,6 +180,13 @@ public class PointZone : MonoBehaviour
         {
             Gizmos.color = new Color(1, 1, 0, 0.2f); // Jaune semi-transparent
             Gizmos.DrawSphere(transform.position, detectionRadius);
+
+            // Afficher aussi la description dans la scène si l'objet est sélectionné
+            if (!string.IsNullOrEmpty(zoneDescription))
+            {
+                UnityEditor.Handles.Label(transform.position + Vector3.up * (detectionRadius + 0.5f),
+                    $"{zoneName} ({pointValue} pts)\n{zoneDescription}");
+            }
         }
     }
 }

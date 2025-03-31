@@ -507,6 +507,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 1 -  Tp 1
   pointValue: 2
+  zoneDescription: On peut se rapprocher de Matthieu pour lui parler
   nextSceneName: Scene 2
   associatedMover: {fileID: 1339662843}
   zoneRenderer: {fileID: 154314213}
@@ -708,6 +709,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 3 - Tp 3
   pointValue: 5
+  zoneDescription: "Parler \xE0 Laure pour l'\xE9loigner"
   nextSceneName: Scene 4.1
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 182235737}
@@ -1074,6 +1076,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 2 - Tp 2
   pointValue: 1
+  zoneDescription: "Parler \xE0 Matthieu"
   nextSceneName: Scene 4.2
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 241397477}
@@ -1473,6 +1476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 1 - Tp 2
   pointValue: 0
+  zoneDescription: On peut se rapprocher d'eux, du groupe
   nextSceneName: Scene 2
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 359660008}
@@ -2408,6 +2412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 4.1 - Tp 2
   pointValue: 4
+  zoneDescription: "S'interposer et faire un discours \xE0 Matthieu."
   nextSceneName: 
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 680882901}
@@ -4141,7 +4146,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   targetSceneName: 
-  moveBeforeSceneStarts: 1
+  moveBeforeSceneStarts: 0
   delayBeforeMovement: 0.5
   useSequence: 1
   movementSteps:
@@ -4154,7 +4159,7 @@ MonoBehaviour:
     waitForCompletion: 1
   - objectsToMove: []
     targetPositions: []
-    stepDuration: 5
+    stepDuration: 1
     delayBeforeStep: 2
     waitForCompletion: 1
   - objectsToMove:
@@ -4214,6 +4219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 2 - Tp 1
   pointValue: 1
+  zoneDescription: Les suivre
   nextSceneName: 
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1131850588}
@@ -4373,11 +4379,11 @@ MonoBehaviour:
     - {fileID: 461589445}
     stepDuration: 5
     delayBeforeStep: 2
-    waitForCompletion: 1
+    waitForCompletion: 0
   - objectsToMove: []
     targetPositions: []
-    stepDuration: 3
-    delayBeforeStep: 1
+    stepDuration: 1
+    delayBeforeStep: 2
     waitForCompletion: 1
   - objectsToMove:
     - {fileID: 914197614}
@@ -5641,6 +5647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 4.2 - Tp 2
   pointValue: 0
+  zoneDescription: "Arr\xEAter Matthieu en voulant l'arr\xEAter"
   nextSceneName: 
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1283247292}
@@ -6216,6 +6223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 3 - Tp 1
   pointValue: 2
+  zoneDescription: "Parler \xE0 quelqu'un d'autre et l'amener vers Matthieu et Laure"
   nextSceneName: Scene 4.2
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1450903355}
@@ -6628,6 +6636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 4.1 - Tp 1
   pointValue: 4
+  zoneDescription: "Signaler \xE0 quelqu'un d'autre"
   nextSceneName: 
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1520210892}
@@ -6825,6 +6834,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 4.2 - Tp 1
   pointValue: 5
+  zoneDescription: Retenir Matthieu
   nextSceneName: 
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1674143374}
@@ -7570,6 +7580,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 4.2 - Tp 3
   pointValue: 2
+  zoneDescription: "Signaler \xE0 quelqu'un de comp\xE9tent"
   nextSceneName: 
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1819848850}
@@ -8412,6 +8423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneName: Scene 2 - Tp 2
   pointValue: 2
+  zoneDescription: S'interposer entre les deux
   nextSceneName: 
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 2002922950}
@@ -8561,7 +8573,7 @@ Transform:
   m_GameObject: {fileID: 2068619300}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1859798, y: -10.775034, z: 18.794956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8914,7 +8926,7 @@ Transform:
   m_GameObject: {fileID: 2145849267}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.1859798, y: 10.775034, z: -18.794956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
