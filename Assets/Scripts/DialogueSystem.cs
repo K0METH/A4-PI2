@@ -9,7 +9,6 @@ public class DialogueLine
     public string speakerName; // Nom du personnage qui parle
     public string dialogueText; // Texte du dialogue
     public float displayDuration = 4f; // Durée d'affichage en secondes
-    public bool waitForInput = false; // Si true, attend une interaction du joueur pour passer au dialogue suivant
 }
 
 // Classe pour représenter une séquence de dialogue
@@ -37,6 +36,19 @@ public class DialogueSystem : MonoBehaviour
     private int currentLineIndex = 0;
     private Coroutine dialogueCoroutine;
 
+    // Méthode publique pour démarrer un dialogue de l'extérieur
+    public void StartDialogueSequence(DialogueSequence sequence)
+    {
+        // Arrêter tout dialogue en cours
+        if (dialogueCoroutine != null)
+        {
+            StopCoroutine(dialogueCoroutine);
+        }
+
+        // Démarrer le nouveau dialogue
+        dialogueCoroutine = StartCoroutine(PlayDialogueSequence(sequence));
+    }
+
     private void Awake()
     {
         // Configuration du singleton
@@ -63,6 +75,13 @@ public class DialogueSystem : MonoBehaviour
         {
             Debug.LogWarning("Tentative de jouer une séquence de dialogue vide ou nulle.");
             yield break;
+        }
+
+        // Si un dialogue est déjà en cours, l'arrêter
+        if (isDisplayingDialogue && dialogueCoroutine != null)
+        {
+            StopCoroutine(dialogueCoroutine);
+            isDisplayingDialogue = false;
         }
 
         Debug.Log($"Début de la séquence de dialogue: {sequence.sequenceName}");
@@ -99,31 +118,9 @@ public class DialogueSystem : MonoBehaviour
                 dialogueText.text = currentLine.dialogueText;
             }
 
-            // Si on attend une entrée utilisateur, attendre jusqu'à ce qu'il appuie sur un bouton
-            if (currentLine.waitForInput)
-            {
-                Debug.Log($"Dialogue en attente d'interaction: {currentLine.dialogueText}");
-
-                // Attendre que le joueur appuie sur un bouton (à adapter selon vos contrôles VR)
-                bool inputReceived = false;
-
-                while (!inputReceived)
-                {
-                    // Exemple: attendre un clic souris (à remplacer par votre détection d'entrée VR)
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        inputReceived = true;
-                    }
-
-                    yield return null;
-                }
-            }
-            else
-            {
-                // Sinon, simplement attendre la durée configurée
-                Debug.Log($"Dialogue affiché: {currentLine.dialogueText}");
-                yield return new WaitForSeconds(currentLine.displayDuration);
-            }
+            // Attendre la durée configurée pour cette ligne
+            Debug.Log($"Dialogue affiché: {currentLine.dialogueText}");
+            yield return new WaitForSeconds(currentLine.displayDuration);
 
             // Passer à la ligne suivante
             currentLineIndex++;

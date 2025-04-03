@@ -5,7 +5,7 @@ public class UIFollow3DObject : MonoBehaviour
 {
     public Transform mainCam;
     public Transform target;
-    public Transform worldSpaceCanvas;
+    public Transform Canvas;
     public Vector3 offset;
     private TextMeshProUGUI textMeshProUGUI; // Pour les TextMeshPro en UI
     private TextMeshPro textMeshPro; // Pour les TextMeshPro 3D
@@ -13,12 +13,10 @@ public class UIFollow3DObject : MonoBehaviour
 
     private void Start()
     {
-        //gameObject.SetActive(false); // Cache l'objet
-        //mainCam = Camera.main.transform;
         textMeshProUGUI = GetComponent<TextMeshProUGUI>();
         textMeshPro = GetComponent<TextMeshPro>();
 
-        transform.SetParent(worldSpaceCanvas);
+        //transform.SetParent(worldSpaceCanvas);
     }
     void Update()
     {

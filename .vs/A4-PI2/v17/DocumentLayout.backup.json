@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Temp\\Compiled-Sprites-Default.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Temp\\Compiled-Sprites-Default.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|c:\\users\\sosol\\documents\\github\\a4-pi2\\assets\\scripts\\pointzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pointzone.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\assets\\scripts\\scenecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scenecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|c:\\users\\sosol\\documents\\github\\a4-pi2\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\assets\\scripts\\textscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\textscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\assets\\scripts\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\assets\\scripts\\dialoguesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E1FB5DE-B7E7-E38E-26B8-59E9AC43BBA5}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialoguesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +39,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Compiled-Sprites-Default.shader",
-              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Temp\\Compiled-Sprites-Default.shader",
-              "RelativeDocumentMoniker": "Temp\\Compiled-Sprites-Default.shader",
-              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Temp\\Compiled-Sprites-Default.shader",
-              "RelativeToolTip": "Temp\\Compiled-Sprites-Default.shader",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-04-01T15:08:29.064Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GameManager.cs",
-              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\GameManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
-              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\GameManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Title": "PointZone.cs",
+              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\PointZone.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PointZone.cs",
+              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\PointZone.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PointZone.cs",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAqwMUAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T14:27:47.091Z",
+              "WhenOpened": "2025-04-03T12:52:00.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TextScript.cs",
-              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\TextScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TextScript.cs",
-              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\TextScript.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TextScript.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAwwBkAAAA2AAAAAAAAAA==",
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAAP4AAAAAAAAAAAAAwIcBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T13:46:13.919Z"
+              "WhenOpened": "2025-04-03T09:06:06.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseInput.cs",
+              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
+              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:46:26.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DialogueSystem.cs",
+              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\DialogueSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DialogueSystem.cs",
+              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\DialogueSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DialogueSystem.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAcwIcAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:41:00.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SceneController.cs",
+              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\SceneController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SceneController.cs",
+              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\SceneController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SceneController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAkwDgBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:40:10.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DialogueManager.cs",
+              "DocumentMoniker": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\DialogueManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DialogueManager.cs",
+              "ToolTip": "C:\\Users\\sosol\\Documents\\GitHub\\A4-PI2\\Assets\\Scripts\\DialogueManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DialogueManager.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAcwCQAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-03T07:12:15.119Z",
+              "EditorCaption": ""
             }
           ]
         }

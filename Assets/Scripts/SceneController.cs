@@ -28,7 +28,6 @@ public class SceneController : MonoBehaviour
 
     [Header("Zones de points")]
     [SerializeField] private List<PointZone> pointZones = new List<PointZone>();
-    [SerializeField] private bool showZonesOnlyDuringAction = true;
 
     private bool isActionActive = false;
     private bool isSceneStarted = false;
@@ -65,18 +64,16 @@ public class SceneController : MonoBehaviour
         hasTriggeredSceneChange = false;
         hasTriggeredDefaultMovement = false;
 
-        // Cacher l'indicateur et les zones au début
+        // Cacher l'indicateur au début
         if (actionIndicator != null)
         {
             actionIndicator.SetActive(false);
         }
 
-        if (showZonesOnlyDuringAction)
+        // Cacher toutes les zones au début de la scène
+        foreach (var zone in pointZones)
         {
-            foreach (var zone in pointZones)
-            {
-                zone.HideZone();
-            }
+            zone.HideZone(); // Réinitialiser l'état de la zone
         }
 
         isSceneStarted = true;
@@ -123,31 +120,54 @@ public class SceneController : MonoBehaviour
     // Coroutine pour jouer les dialogues pendant la scène principale
     private IEnumerator PlaySceneDialogues()
     {
-        if (sceneDialogues == null || sceneDialogues.Count == 0)
-            yield break;
+        // Filtrer les éléments nuls de la liste avant de commencer
+        List<DialogueSequence> validDialogues = new List<DialogueSequence>();
+        List<float> validDelays = new List<float>();
 
-        // Vérifier que les délais sont configurés correctement
-        if (dialogueDelays.Count != sceneDialogues.Count)
-        {
-            Debug.LogWarning("Le nombre de délais ne correspond pas au nombre de dialogues. Utilisation de délais par défaut.");
-            dialogueDelays.Clear();
-            for (int i = 0; i < sceneDialogues.Count; i++)
-            {
-                dialogueDelays.Add(i * 5f); // Délai par défaut de 5 secondes entre chaque dialogue
-            }
-        }
-
-        // Jouer les dialogues avec leurs délais respectifs
         for (int i = 0; i < sceneDialogues.Count; i++)
         {
             if (sceneDialogues[i] != null)
             {
-                yield return new WaitForSeconds(dialogueDelays[i]);
-
-                if (DialogueSystem.Instance != null)
+                validDialogues.Add(sceneDialogues[i]);
+                // S'assurer que nous avons assez de délais
+                if (i < dialogueDelays.Count)
                 {
-                    yield return StartCoroutine(DialogueSystem.Instance.PlayDialogueSequence(sceneDialogues[i]));
+                    validDelays.Add(dialogueDelays[i]);
                 }
+                else
+                {
+                    validDelays.Add(0f); // Délai par défaut si manquant
+                }
+            }
+        }
+
+        // Si aucun dialogue valide, sortir
+        if (validDialogues.Count == 0)
+            yield break;
+
+        // Vérifier que les délais sont configurés correctement
+        if (validDelays.Count != validDialogues.Count)
+        {
+            Debug.LogWarning("Le nombre de délais ne correspond pas au nombre de dialogues. Utilisation de délais par défaut.");
+            validDelays.Clear();
+            for (int i = 0; i < validDialogues.Count; i++)
+            {
+                validDelays.Add(i * 5f); // Délai par défaut de 5 secondes entre chaque dialogue
+            }
+        }
+
+        // Jouer les dialogues valides avec leurs délais respectifs
+        for (int i = 0; i < validDialogues.Count; i++)
+        {
+            yield return new WaitForSeconds(validDelays[i]);
+
+            if (DialogueSystem.Instance != null)
+            {
+                // Afficher des infos de débogage pour comprendre ce qui est joué
+                Debug.Log($"Lancement de la séquence de dialogue: {validDialogues[i].sequenceName}");
+                Debug.Log($"Nombre de lignes dans cette séquence: {validDialogues[i].dialogueLines.Length}");
+
+                yield return StartCoroutine(DialogueSystem.Instance.PlayDialogueSequence(validDialogues[i]));
             }
         }
     }
@@ -184,13 +204,10 @@ public class SceneController : MonoBehaviour
             actionIndicator.SetActive(true);
         }
 
-        // Activer les zones pendant l'action
-        if (showZonesOnlyDuringAction)
+        // Activer toutes les zones pendant l'action
+        foreach (var zone in pointZones)
         {
-            foreach (var zone in pointZones)
-            {
-                zone.ShowZone();
-            }
+            zone.ShowZone();
         }
     }
 
@@ -278,13 +295,10 @@ public class SceneController : MonoBehaviour
             }
         }
 
-        // Cacher les zones après l'action
-        if (showZonesOnlyDuringAction)
+        // Cacher toutes les zones après l'action
+        foreach (var zone in pointZones)
         {
-            foreach (var zone in pointZones)
-            {
-                zone.HideZone();
-            }
+            zone.HideZone();
         }
 
         // Si aucun mouvement n'a été déclenché, exécuter le mouvement par défaut
