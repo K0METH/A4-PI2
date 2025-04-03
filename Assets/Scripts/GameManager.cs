@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
     // Démarrer une scène spécifique
     public IEnumerator StartScene(int sceneIndex)
     {
+        HideTimer();
         if (sceneIndex < 0 || sceneIndex >= scenesList.Count)
         {
             Debug.LogError("Index de scène invalide: " + sceneIndex);

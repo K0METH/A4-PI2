@@ -12,6 +12,10 @@ public class MoverStep
     public float stepDuration = 2.0f;
     public float delayBeforeStep = 0.5f;
     public bool waitForCompletion = true;
+
+    // Liste des triggers d'animation pour chaque objet
+    [SerializeField]
+    public List<string> animationTriggers = new List<string>();
 }
 
 public class EnvironmentMover : MonoBehaviour
@@ -23,7 +27,7 @@ public class EnvironmentMover : MonoBehaviour
     [SerializeField] public AnimationCurve movementCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
     [Header("Configuration de la scène")]
-    [SerializeField] private string targetSceneName = ""; // Nom de la scène avant laquelle l'animation se déclenchera
+    [SerializeField] private string targetSceneName = "";
     [SerializeField] private bool moveBeforeSceneStarts = true;
     [SerializeField] public float delayBeforeMovement = 0.5f;
 
@@ -173,6 +177,27 @@ public class EnvironmentMover : MonoBehaviour
                 continue;
             }
 
+            // Déclencher les animations avant le mouvement
+            for (int i = 0; i < step.objectsToMove.Count; i++)
+            {
+                GameObject obj = step.objectsToMove[i];
+
+                // Vérifier si un trigger d'animation existe pour cet objet
+                if (i < step.animationTriggers.Count && !string.IsNullOrEmpty(step.animationTriggers[i]))
+                {
+                    Animator animator = obj.GetComponent<Animator>();
+                    if (animator != null)
+                    {
+                        Debug.Log($"Déclenchement de l'animation {step.animationTriggers[i]} pour {obj.name}");
+                        animator.SetTrigger(step.animationTriggers[i]);
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Pas d'Animator trouvé sur {obj.name}");
+                    }
+                }
+            }
+
             // Déplacer chaque objet vers sa position cible
             List<Coroutine> stepCoroutines = new List<Coroutine>();
 
@@ -203,14 +228,29 @@ public class EnvironmentMover : MonoBehaviour
         float startTime = Time.time;
         float endTime = startTime + duration;
 
+        Animator anim = obj.GetComponentInChildren<Animator>();
+        if (anim != null)
+        {
+            anim.SetTrigger("Walk");
+        }
+
         while (Time.time < endTime)
         {
             float normalizedTime = (Time.time - startTime) / duration;
             float curveValue = movementCurve.Evaluate(normalizedTime);
 
+            // Calcul de la direction vers la position cible
+            Vector3 direction = targetPosition - obj.transform.position;
+
+            // Normalisation de la direction
+            direction.Normalize();
+
+            // Calcul de la rotation souhaitée
+            Quaternion rotationSouhaitee = Quaternion.LookRotation(direction, Vector3.up);
+
             // Mise à jour de la position et rotation
             obj.transform.position = Vector3.Lerp(startPosition, targetPosition, curveValue);
-            obj.transform.rotation = Quaternion.Slerp(startRotation, targetRotation, curveValue);
+            obj.transform.rotation = Quaternion.Slerp(obj.transform.rotation, rotationSouhaitee, vitesseRotation * Time.deltaTime);
 
             yield return null;
         }
@@ -219,6 +259,10 @@ public class EnvironmentMover : MonoBehaviour
         obj.transform.position = targetPosition;
         obj.transform.rotation = targetRotation;
     }
+
+    // Vous devez définir la vitesse de rotation quelque part dans votre script
+    public float vitesseRotation = 5f;
+
 
     // Méthode pour réinitialiser les objets à leur position d'origine
     public void ResetObjects()
@@ -274,7 +318,7 @@ public class EnvironmentMover : MonoBehaviour
 
                         // Afficher le numéro de l'étape
 #if UNITY_EDITOR
-                        UnityEditor.Handles.Label(target.position + Vector3.up * 0.3f, $"Étape {s+1}");
+                        UnityEditor.Handles.Label(target.position + Vector3.up * 0.3f, $"Étape {s + 1}");
 #endif
                     }
                 }
