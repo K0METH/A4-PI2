@@ -1,0 +1,116 @@
+fileFormatVersion: 2
+guid: a3924c4ea757c564db8da1175fa5bbc9
+timeCreated: 1499443188
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: AK015
+    100002: Ammo Box 1
+    100004: Ammo Box 3
+    100006: AR016
+    100008: AUG003
+    100010: Grenade006
+    100012: //RootNode
+    100014: HandGun
+    100016: Vest
+    400000: AK015
+    400002: Ammo Box 1
+    400004: Ammo Box 3
+    400006: AR016
+    400008: AUG003
+    400010: Grenade006
+    400012: //RootNode
+    400014: HandGun
+    400016: Vest
+    2300000: AK015
+    2300002: Ammo Box 1
+    2300004: Ammo Box 3
+    2300006: AR016
+    2300008: AUG003
+    2300010: Grenade006
+    2300012: //RootNode
+    2300014: HandGun
+    2300016: Vest
+    3300000: AK015
+    3300002: Ammo Box 1
+    3300004: Ammo Box 3
+    3300006: AR016
+    3300008: AUG003
+    3300010: Grenade006
+    3300012: //RootNode
+    3300014: HandGun
+    3300016: Vest
+    4300000: Weapon Locker
+    4300002: Grenade006
+    4300004: AR016
+    4300006: AK015
+    4300008: AUG003
+    4300010: Vest
+    4300012: Ammo Box 3
+    4300014: Ammo Box 1
+    4300016: HandGun
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

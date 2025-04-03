@@ -16,6 +16,11 @@ public class PointZone : MonoBehaviour
     [Header("Transition de scène")]
     [SerializeField] private string nextSceneName = ""; // Pour la prochaine scène
 
+    [Header("Dialogues")]
+    [SerializeField] private DialogueSequence zoneDialogue; // Dialogue à jouer quand le joueur entre dans la zone
+    [SerializeField] private bool playDialogueImmediately = true; // Jouer le dialogue dès que le joueur entre dans la zone
+    [SerializeField] private bool canPlayDialogueMultipleTimes = false; // Permet de rejouer le dialogue
+
     [Header("Mouvements des personnages")]
     [SerializeField] private EnvironmentMover associatedMover; // Mover spécifique à cette zone
 
@@ -30,6 +35,7 @@ public class PointZone : MonoBehaviour
     private bool hasTriggeredMovement = false; // Pour s'assurer qu'on ne déclenche le mouvement qu'une fois
     private bool hasBeenActivated = false; // Pour savoir si la zone a été activée, même sans mover
     private bool isMovementPending = false; // Pour différer l'exécution du mouvement jusqu'à la fin du timer
+    private bool hasPlayedDialogue = false; // Pour savoir si le dialogue a déjà été joué
 
     // Propriétés publiques en lecture seule
     public string ZoneName => zoneName;
@@ -106,6 +112,10 @@ public class PointZone : MonoBehaviour
         hasTriggeredMovement = false;
         hasBeenActivated = false;
         isMovementPending = false;
+        if (!canPlayDialogueMultipleTimes)
+        {
+            hasPlayedDialogue = false;
+        }
 
         // Changer le matériau si spécifié
         if (zoneRenderer != null && inactiveMaterial != null)
@@ -142,6 +152,13 @@ public class PointZone : MonoBehaviour
             // Marquer que cette zone a été activée
             hasBeenActivated = true;
 
+            // Jouer le dialogue si configuré
+            if (zoneDialogue != null && playDialogueImmediately && !hasPlayedDialogue && DialogueSystem.Instance != null)
+            {
+                hasPlayedDialogue = true;
+                StartCoroutine(DialogueSystem.Instance.PlayDialogueSequence(zoneDialogue));
+            }
+
             // Marquer le mouvement comme "en attente" au lieu de l'exécuter immédiatement
             if (associatedMover != null && !hasTriggeredMovement && !isMovementPending)
             {
@@ -166,6 +183,16 @@ public class PointZone : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    // Joue le dialogue de la zone (peut être appelé manuellement)
+    public void PlayZoneDialogue()
+    {
+        if (zoneDialogue != null && (!hasPlayedDialogue || canPlayDialogueMultipleTimes) && DialogueSystem.Instance != null)
+        {
+            hasPlayedDialogue = true;
+            StartCoroutine(DialogueSystem.Instance.PlayDialogueSequence(zoneDialogue));
+        }
     }
 
     // Visualiser la zone en mode éditeur
