@@ -258,6 +258,8 @@ public class EnvironmentMover : MonoBehaviour
         // S'assurer que l'objet est exactement à la position finale
         obj.transform.position = targetPosition;
         obj.transform.rotation = targetRotation;
+
+        anim.SetTrigger("Idle");
     }
 
     // Vous devez définir la vitesse de rotation quelque part dans votre script
