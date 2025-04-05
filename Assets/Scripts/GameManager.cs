@@ -133,7 +133,6 @@ public class GameManager : MonoBehaviour
         customSceneTransitionTriggered = false;
         customNextSceneName = "";
 
-        Debug.Log("Démarrage de la scène " + sceneIndex);
 
         // Désactiver la scène actuelle si elle existe
         if (currentScene != null)
