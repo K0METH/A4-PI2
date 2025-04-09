@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|c:\\users\\linjo\\desktop\\garance\\esilv\\a4\\parcours_ux\\pi2\\a4-pi2-project-vss\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -42,8 +42,7 @@
               "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
               "ViewState": "AgIAADkAAAAAAAAAAAApwEoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-09T09:08:59.223Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-09T09:08:59.223Z"
             },
             {
               "$type": "Document",
@@ -53,7 +52,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
               "ToolTip": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Assets\\Scripts\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAApwC4AAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAGYBAAAAAAAAAAAYwH0BAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-05T20:19:23.736Z",
               "EditorCaption": ""
