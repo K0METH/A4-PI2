@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|c:\\users\\linjo\\desktop\\garance\\esilv\\a4\\parcours_ux\\pi2\\a4-pi2-project-vss\\assets\\scripts\\environmentmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\environmentmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|c:\\users\\linjo\\desktop\\garance\\esilv\\a4\\parcours_ux\\pi2\\a4-pi2-project-vss\\assets\\scripts\\dialoguesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|c:\\users\\linjo\\desktop\\garance\\esilv\\a4\\parcours_ux\\pi2\\a4-pi2-project-vss\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\assets\\scripts\\dialoguesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C351A646-E6EC-1B87-FD2F-87F7C46359F8}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialoguesystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,19 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EnvironmentMover.cs",
-              "DocumentMoniker": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Assets\\Scripts\\EnvironmentMover.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\EnvironmentMover.cs",
-              "ToolTip": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Assets\\Scripts\\EnvironmentMover.cs",
-              "RelativeToolTip": "Assets\\Scripts\\EnvironmentMover.cs",
-              "ViewState": "AgIAAPQAAAAAAAAAAAAcwAUBAAAgAAAAAAAAAA==",
+              "Title": "BaseInput.cs",
+              "DocumentMoniker": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
+              "ToolTip": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.ugui@1.0.0\\Runtime\\EventSystem\\InputModules\\BaseInput.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAApwEoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-05T19:33:04.137Z",
+              "WhenOpened": "2025-04-09T09:08:59.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-05T20:19:23.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SceneController.cs",
               "DocumentMoniker": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Assets\\Scripts\\SceneController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\SceneController.cs",
@@ -55,7 +72,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "DialogueSystem.cs",
               "DocumentMoniker": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Assets\\Scripts\\DialogueSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DialogueSystem.cs",
@@ -63,12 +80,11 @@
               "RelativeToolTip": "Assets\\Scripts\\DialogueSystem.cs",
               "ViewState": "AgIAAH4AAAAAAAAAAAAowKIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T17:17:25.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-31T17:17:25.065Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PointZone.cs",
               "DocumentMoniker": "C:\\Users\\linjo\\Desktop\\GARANCE\\ESILV\\A4\\PARCOURS_UX\\PI2\\A4-PI2-PROJECT-VSS\\Assets\\Scripts\\PointZone.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PointZone.cs",

@@ -1030,9 +1030,12 @@ MonoBehaviour:
   nextSceneName: Scene 2
   zoneDialogue:
     sequenceName: 
-    dialogueLines: []
+    dialogueLines:
+    - speakerName: 
+      dialogueText: tessst
+      displayDuration: 0
     delayBeforeStart: 0
-  playDialogueImmediately: 1
+  playDialogueImmediately: 0
   canPlayDialogueMultipleTimes: 0
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 154314213}
@@ -4127,28 +4130,27 @@ MonoBehaviour:
       dialogueText: "Plut\xF4t bien, quelques ajustements encore."
       displayDuration: 4
     - speakerName: Matthieu
-      dialogueText: "S\xE9rieusement, Laure, tu devrais te mettre plus en avant.
-        On manque de talents comme toi."
+      dialogueText: "Ce qui est s\xFBr, c'est que gr\xE2ce \xE0 vos tenues Laure,
+        les clients sont toujours pr\xEAt \xE0 accepter !"
       displayDuration: 4
     - speakerName: Laure
       dialogueText: "Je pr\xE9f\xE8re laisser mon travail parler."
       displayDuration: 4
     - speakerName: Clara
-      dialogueText: "On a une \xE9quipe en or, c\u2019est clair !"
+      dialogueText: "... Toute l'\xE9quipe fournit de son mieux !"
       displayDuration: 4
     - speakerName: Matthieu
-      dialogueText: Toi aussi, Clara. Mais Laure, on devrait parler de certains points.
-        Pourquoi pas maintenant ?
+      dialogueText: "Tout le monde, c'est vrai, mais je le r\xE9p\xE8te, sans la
+        belle Laure, que serons-nous ..."
       displayDuration: 4
     - speakerName: Laure
-      dialogueText: "Plus tard, j\u2019allais justement voir Nausicaa et Cl\xE9mence."
+      dialogueText: "Je vais aller voir Nausicaa et Cl\xE9mence, je reviens."
       displayDuration: 4
     - speakerName: Matthieu
-      dialogueText: "Je n\u2019ai pas termin\xE9. Laure, tu peux m\u2019\xE9clairer
-        sur un point ?"
+      dialogueText: "Laure, voyons, il ne faut pas \xEAtre timide ! Ce sont des compliments."
       displayDuration: 4
     - speakerName: Laure
-      dialogueText: "Plus tard, si tu permets\u2026"
+      dialogueText: "Je pr\xE9f\xE8re y aller"
       displayDuration: 4
     delayBeforeStart: 10
   dialogueDelays: []
@@ -5033,7 +5035,12 @@ MonoBehaviour:
   nextSceneName: 
   zoneDialogue:
     sequenceName: 
-    dialogueLines: []
+    dialogueLines:
+    - speakerName: 
+      dialogueText: "En choisissant cette zone, vous avez choisi de vous interposez
+        de et vous-m\xEAme parler \xE0 Matthieu. C'est une bonne soltuion et Laure
+        n'a pas \xE9t\xE9 agress\xE9e."
+      displayDuration: 10
     delayBeforeStart: 0
   playDialogueImmediately: 1
   canPlayDialogueMultipleTimes: 0
@@ -5843,7 +5850,14 @@ MonoBehaviour:
   sceneDuration: 5
   actionDuration: 10
   sceneIndex: 3
-  sceneDialogues: []
+  sceneDialogues:
+  - sequenceName: 
+    dialogueLines:
+    - speakerName: Matthieu
+      dialogueText: "Laure, pourquoi fuis-tu comme \xE7a ? Tu devrais me respecter,
+        je suis ton sup\xE9rieur"
+      displayDuration: 4
+    delayBeforeStart: 0
   dialogueDelays: []
   isEndOfBranch: 1
   defaultNextSceneName: 
@@ -7177,7 +7191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001666626}
   m_Layer: 0
-  m_Name: Scene 4.2 Tps
+  m_Name: Scene 4.1 Tps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7623,7 +7637,7 @@ PrefabInstance:
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7927,10 +7941,43 @@ MonoBehaviour:
   sceneName: Scene 2
   sceneDescription: 'Laure change de groupe, Matthieu la suit tout en continuant
     de lui parler. '
-  sceneDuration: 25
-  actionDuration: 10
+  sceneDuration: 36
+  actionDuration: 15
   sceneIndex: 1
-  sceneDialogues: []
+  sceneDialogues:
+  - sequenceName: 
+    dialogueLines:
+    - speakerName: Matthieu
+      dialogueText: Tu sais Laure, il ne faut pas se vexer pour si peu
+      displayDuration: 4
+    - speakerName: Laure
+      dialogueText: ...
+      displayDuration: 4
+    - speakerName: Matthieu
+      dialogueText: Personne n'est d'accord avec moi ? Je trouve que Laure est ravissante,
+        encore plus ce soir !
+      displayDuration: 4
+    - speakerName: Igor
+      dialogueText: C'est vrai que tu es ravissante Laure
+      displayDuration: 4
+    - speakerName: Laure
+      dialogueText: J'aimerais que l'on parle d'autre chose s'il-vous-plait
+      displayDuration: 4
+    - speakerName: Matthieu
+      dialogueText: "Nan mais s\xE9rieusement Laure, je ne dis pas \xE7a \xE0 mal.
+        C'est simplement qu'avec une tenue pareille ..."
+      displayDuration: 4
+    - speakerName: 'Laure '
+      dialogueText: Ca devient lourd, s'il-te-plait Matthieu
+      displayDuration: 4
+    - speakerName: Matthieu
+      dialogueText: "Roh je rigole tu sais, mais tout homme se verrait d\xE9contr\xE9
+        avec une file et une tenue pareils, moi le premier !"
+      displayDuration: 4
+    - speakerName: Laure
+      dialogueText: "Nausicaa est l\xE0 bas, je vais la rejoindre."
+      displayDuration: 4
+    delayBeforeStart: 0
   dialogueDelays: []
   isEndOfBranch: 0
   defaultNextSceneName: Scene 3
@@ -9451,10 +9498,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: Scene 3
   sceneDescription: Ajouter description
-  sceneDuration: 5
-  actionDuration: 10
+  sceneDuration: 37
+  actionDuration: 15
   sceneIndex: 2
-  sceneDialogues: []
+  sceneDialogues:
+  - sequenceName: 
+    dialogueLines:
+    - speakerName: Matthieu
+      dialogueText: "Laure enfin, il ne faut pas fuir comme \xE7a. Ce ne sont que
+        des compliments"
+      displayDuration: 4
+    - speakerName: Laure
+      dialogueText: ...
+      displayDuration: 0
+    - speakerName: Laure
+      dialogueText: "Je suis vraiment mal \xE0 l'aise Matthieu s'il-te-plait"
+      displayDuration: 4
+    - speakerName: Matthieu
+      dialogueText: "\xC0 fuir comme \xE7a, je vais commence \xE0 croire que je suis
+        un probl\xE8me, alors qu'ici c'est toi qui fuis"
+      displayDuration: 4
+    - speakerName: Laure
+      dialogueText: "Peux-tu arr\xEAter Matthieu s'il-te-plait ?"
+      displayDuration: 4
+    - speakerName: Matthieu
+      dialogueText: "Je te trouve culott\xE9e. Tu fuis les compliments, \xE0 croire
+        que tu veux te faire d\xE9sirer plus encore !"
+      displayDuration: 4
+    - speakerName: Laure
+      dialogueText: ...
+      displayDuration: 4
+    - speakerName: Matthieu
+      dialogueText: "C'est toi qui cr\xE9e cette dynamique, tu le sais j'esp\xE8re
+        ?"
+      displayDuration: 4
+    - speakerName: Laure
+      dialogueText: Je m'en vais aux toilettes
+      displayDuration: 4
+    delayBeforeStart: 0
   dialogueDelays: []
   isEndOfBranch: 0
   defaultNextSceneName: Scene 4.2
@@ -9891,9 +9972,13 @@ MonoBehaviour:
   nextSceneName: 
   zoneDialogue:
     sequenceName: 
-    dialogueLines: []
+    dialogueLines:
+    - speakerName: 
+      dialogueText: "En choisissant cette zone, vous vous interposez et vous arr\xEAtez
+        Matthieu. Vous emp\xEAchez qu'il suive Laurre aux toilettes et donc l'agression."
+      displayDuration: 0
     delayBeforeStart: 0
-  playDialogueImmediately: 1
+  playDialogueImmediately: 0
   canPlayDialogueMultipleTimes: 0
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1283247292}
@@ -11698,9 +11783,13 @@ MonoBehaviour:
   nextSceneName: 
   zoneDialogue:
     sequenceName: 
-    dialogueLines: []
+    dialogueLines:
+    - speakerName: 
+      dialogueText: "En choisissant cette zone, vous aez choisi d'avertir quelqu'un
+        de comp\xE9tent du comportement de Matthieu. Laure n'a pas \xE9t\xE9 agress\xE9e."
+      displayDuration: 10
     delayBeforeStart: 0
-  playDialogueImmediately: 1
+  playDialogueImmediately: 0
   canPlayDialogueMultipleTimes: 0
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1520210892}
@@ -12199,7 +12288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1636647816}
   m_Layer: 0
-  m_Name: Scene 4.2 Movers
+  m_Name: Scene 4.1 Movers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12414,9 +12503,14 @@ MonoBehaviour:
   nextSceneName: 
   zoneDialogue:
     sequenceName: 
-    dialogueLines: []
+    dialogueLines:
+    - speakerName: 
+      dialogueText: "En choisissant cette zone, vous d\xE9cidez de parler \xE0 Matthieu,
+        ce qui le retient et \xE9vite qu'il suive Laure aux toilettes, vous emp\xEAchez
+        l'agression."
+      displayDuration: 0
     delayBeforeStart: 0
-  playDialogueImmediately: 1
+  playDialogueImmediately: 0
   canPlayDialogueMultipleTimes: 0
   associatedMover: {fileID: 0}
   zoneRenderer: {fileID: 1674143374}
@@ -13655,7 +13749,11 @@ MonoBehaviour:
   nextSceneName: 
   zoneDialogue:
     sequenceName: 
-    dialogueLines: []
+    dialogueLines:
+    - speakerName: 
+      dialogueText: "En choisissant cette zone, vous avez signalez le comportement
+        de Matthieu \xE0 quelqu'un de compt\xE9tent et vous emp\xEAchez l'agression."
+      displayDuration: 0
     delayBeforeStart: 0
   playDialogueImmediately: 1
   canPlayDialogueMultipleTimes: 0
