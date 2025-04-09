@@ -318,6 +318,11 @@ public class GameManager : MonoBehaviour
         {
             timerUI.SetActive(false);
         }
+
+        if (timerText != null)
+        {
+            timerText.text = ""; // Vider le texte affiché
+        }
     }
 
     // Ajouter des points au score du joueur (interne, non affiché)

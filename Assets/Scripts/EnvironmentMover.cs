@@ -91,7 +91,7 @@ public class EnvironmentMover : MonoBehaviour
         float startTime = Time.time;
         float endTime = startTime + duration;
         Animator anim = obj.GetComponentInChildren<Animator>();
-        if(anim != null)
+        if (anim != null)
         {
             anim.SetTrigger("Walk");
         }
@@ -153,5 +153,5 @@ public class EnvironmentMover : MonoBehaviour
             }
         }
 #endif
-    }
+    }
 }
